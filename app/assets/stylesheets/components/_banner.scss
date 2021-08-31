@@ -1,0 +1,25 @@
+
+.banner {
+  background-image: image-url("banner.jpg");
+  // background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.banner-header{
+  font-size: 2rem;
+  color: white;
+  margin-left: 8%;
+}
+
+.dragged {
+  position:fixed;
+  top:0;
+}
+
+

@@ -1,0 +1,27 @@
+.secondary-banner{
+  background-image: image-url("banner2.jpg");
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  scale: 0.8;
+}
+
+.secondary-banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 8rem;
+  margin-right: 10%;
+}
+
+.secondary-banner-quote{
+  text-align: right;
+  color: white;
+}
+
+.secondary-banner-name{
+  color:white;
+}

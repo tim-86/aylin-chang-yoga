@@ -1,0 +1,86 @@
+/* Css Partials */
+
+@import "components/index";
+
+
+
+
+/* general styling */
+
+// body {
+//   margin: 0;
+//   font-family: "Roboto", sans-serif;
+// }
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%; // 1rem // 16px
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  box-sizing: border-box;
+  font-weight: normal;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+ul,
+li,
+a {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.seotitle {
+  display: none;
+}
+
