@@ -5,6 +5,7 @@
 </head>
 
 <body>
+
   <div class= "banner">
     <h1 class= "banner-header">Aylin Chang Yoga</h1>
     <a class="call-to-action" href="">MOVE WITH ME</a>
@@ -20,15 +21,15 @@
 
   <div class="video-collage-container">
     <div class= "video-collage">
-      <div class= video-1>
-        <%= video_tag "video1.mp4",  class: "video" %>
-      </div>
-      <div class= video-2>
-        <%= video_tag "video1.mp4",  class: "video" %>
-      </div>
-      <div class= video-3>
-        <%= video_tag "video1.mp4",  class: "video" %>
-      </div>
+
+
+
+        <%= video_tag "video1.mp4", muted: true, class: "video video-1" %>
+
+        <%= video_tag "video1.mp4", muted: true, class: "video video-2" %>
+
+        <%= video_tag "video1.mp4", muted: true, class: "video video-3" %>
+
     </div>
   </div>
 
@@ -54,6 +55,174 @@
       <p class= "card-info-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
   </div>
+  <% if false %>
+    <div class="aylin-gallery">
+      <div class="main-img">
+        <div id="current"  style="background-image: url(<%= image_path "card-2.jpg"%>)" ></div>
+      </div>
+      
+      <div class="images-grid" >
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+        <div class="grid-images" style="background-image: url(<%= image_path "card-1.jpg"%>)">
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="mosaic-gallery">
+  
+    <div class="mosaic-container h-2">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-1.jpg" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-2.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mosaic-container w-3 h-3">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-3.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-4.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-5.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-6.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-7.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-8.jpg", class:"preview-image"%>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-9.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container h-4 ">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-10.jpg", class:"preview-image"%>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container w-2 h-3">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-12.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-14.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+     <div class="mosaic-container h-4 h-3">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-15.jpg", class:"preview-image"%>
+        </div>
+      </div>
+    </div>
+
+     <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-16.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+     <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-17.jpg", class:"preview-image"%>
+        </div>
+      </div>
+    </div>
+
+     <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-18.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+     <div class="mosaic-container">
+      <div class= "mosaic-item">
+        <div class="mosaic-image">
+          <%= image_tag "img-19.jpg", class:"preview-image" %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 
 </body>
 </html>

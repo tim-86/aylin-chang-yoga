@@ -19,9 +19,10 @@ require("channels")
 
 import {navbarBurger} from '../components/navbar';
 import {navBarOpacity} from '../components/navbar';
-import {togglePlayer} from '../components/video';
+import {debounce} from '../components/navbar';
+import {stickyHeaderToggle} from '../components/navbar';
 
-const simpleParallax = require('simple-parallax-js');
+
 
 
 
@@ -33,18 +34,33 @@ document.addEventListener('turbolinks:load', () => {
     navbarBurger()});
 
   /* Navbar Opacity Animation */
-  window.addEventListener('scroll', ()  => {
-    navBarOpacity();
-  });
+  window.addEventListener('scroll', debounce(navBarOpacity));
+/* 
+  const current = document.querySelector('#current');
+  const imgs = document.querySelectorAll('.grid-images');
+
+
+  imgs.forEach(img => img.addEventListener('click', () => current.style.backgroundImage = img.style.backgroundImage))
+ */
+
+  const lightboxBG = document.createElement('div');
+  lightboxBG.id = "lightboxBG"
+  document.body.appendChild(lightboxBG);
+
+  const images = document.querySelectorAll(".")
+
 
   /* Video Player */
-  const videos = document.querySelectorAll('.video');
-  videos.forEach((video) =>{
-    video.addEventListener('mouseenter', () => {
-      console.log("im in");
-      togglePlayer;
-    })
-  });
-
-
-});
+  const videos = document.querySelectorAll(".video");
+  videos.forEach((video)=> {
+    video.addEventListener("mouseover", function() {
+      this.play();
+    });
+    video.addEventListener("mouseleave", function() {
+      this.pause();
+    });
+  })
+});// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);

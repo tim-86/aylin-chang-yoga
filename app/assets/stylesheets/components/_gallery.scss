@@ -1,0 +1,172 @@
+.aylin-gallery {
+  max-width: 80%;
+  background: black;
+  border: solid 2px black;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+#current {
+  min-height: 70vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 3%;
+}
+
+.grid-images {
+  min-height: 10vh;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+
+
+/* mosaic grid */
+
+.mosaic-gallery {
+  margin-top: 100px;
+  background: black;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px 300px;
+  grid-auto-flow: dense;
+  gap: 10px;
+
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+.w-2 {
+  grid-column: span 2;
+}
+.w-3 {
+  grid-column: span 3;
+}
+.w-4 {
+  grid-column: span 4;
+}
+.w-5 {
+  grid-column: span 5;
+}
+.w-6 {
+  grid-column: span 6;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+.h-2 {
+  grid-row: span 2;
+}
+.h-3 {
+  grid-row: span 3;
+}
+.h-4 {
+  grid-row: span 4;
+}
+.h-5 {
+  grid-row: span 5;
+}
+.h-6 {
+  grid-row: span 6;
+}
+
+
+
+.mosaic-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mosaic-item .mosaic-image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mosaic-item .mosaic-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.mosaic-item:hover .mosaic-image img {
+  transform: scale(1.5);
+}
+
+
+#lightboxBG {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 150, 150, 0.6);
+  --webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  display: none;
+}
+
+#lightboxBG.active {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .mosaic-gallery{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .w-1 {
+    grid-column: span 1;
+  }
+  .w-2 {
+    grid-column: span 1;
+  }
+  .w-3 {
+    grid-column: span 1;
+  }
+  .w-4 {
+    grid-column: span 1;
+  }
+  .w-5 {
+    grid-column: span 1;
+  }
+  .w-6 {
+    grid-column: span 1;
+  }
+  
+  .h-1 {
+    grid-row: span 1;
+  }
+  .h-2 {
+    grid-row: span 2;
+  }
+  .h-3 {
+    grid-row: span 3;
+  }
+  .h-4 {
+    grid-row: span 4;
+  }
+  .h-5 {
+    grid-row: span 5;
+  }
+  .h-6 {
+    grid-row: span 6;
+  }
+
+}

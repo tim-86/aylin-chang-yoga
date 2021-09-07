@@ -12,6 +12,14 @@
   grid: repeat(19, 1fr) / repeat(25, 1fr)
 }
 
+.video{
+  transition: 0.2s;
+}
+.video:hover{
+  z-index: 4;
+  transform: scale(1.1);
+}
+
 .video-1{
   grid-row: 4 / 14;
   grid-column: 1 / 12;

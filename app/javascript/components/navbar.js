@@ -24,11 +24,11 @@ const navBarOpacity = () => {
   const navBar = document.querySelector('.navigation');
   const navItems = document.querySelectorAll('.nav-item');
   const bannerHeader = document.querySelector('.banner-header');
+  const callToAction = document.querySelector('.call-to-action')
   const logo = document.querySelector('.logo-aylin');
 
-  
 
-  if(window.pageYOffset >= (bannerHeader.offsetTop)){
+  if(window.pageYOffset >= (callToAction.offsetTop)){
     navBar.classList.add('scrolled')
     navItems.forEach((item) => {
       item.classList.add('scrolled-nav-item');
@@ -65,5 +65,7 @@ const debounce = (func, wait = 20, immediate = true) => {
 }
 
 
+
 export{navbarBurger};
 export{navBarOpacity};
+export{debounce};
