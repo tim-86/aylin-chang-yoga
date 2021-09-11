@@ -1,4 +1,5 @@
 .aylin-gallery {
+  margin-top: 100px;
   max-width: 80%;
   background: black;
   border: solid 2px black;
@@ -32,7 +33,7 @@
 /* mosaic grid */
 
 .mosaic-gallery {
-  margin-top: 100px;
+  padding: 1rem;
   background: black;
   width: 80%;
   margin: auto;
@@ -41,7 +42,6 @@
   grid-auto-rows: 100px 300px;
   grid-auto-flow: dense;
   gap: 10px;
-
 }
 
 .w-1 {
@@ -122,9 +122,16 @@
   display: none;
 }
 
-#lightboxBG.active {
+#lightboxBG.active-lightbox {
   display: grid;
   place-items: center;
+}
+
+#lightbox-image{
+  height: 60vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border: black solid 2px;
 }
 
 @media screen and (max-width: 750px) {

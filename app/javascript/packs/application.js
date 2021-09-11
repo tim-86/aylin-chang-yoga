@@ -20,7 +20,8 @@ require("channels")
 import {navbarBurger} from '../components/navbar';
 import {navBarOpacity} from '../components/navbar';
 import {debounce} from '../components/navbar';
-import {stickyHeaderToggle} from '../components/navbar';
+import {gallery} from '../components/media-gallery';
+import {videoPlayer} from '../components/video';
 
 
 
@@ -35,32 +36,22 @@ document.addEventListener('turbolinks:load', () => {
 
   /* Navbar Opacity Animation */
   window.addEventListener('scroll', debounce(navBarOpacity));
-/* 
-  const current = document.querySelector('#current');
-  const imgs = document.querySelectorAll('.grid-images');
 
 
-  imgs.forEach(img => img.addEventListener('click', () => current.style.backgroundImage = img.style.backgroundImage))
- */
+ /* gallery */
+  const images = document.querySelectorAll(".preview-image");
 
-  const lightboxBG = document.createElement('div');
-  lightboxBG.id = "lightboxBG"
-  document.body.appendChild(lightboxBG);
+  images.forEach(image =>{
+    image.addEventListener('click', e => {
+      gallery(image);
+    })
+  })
 
-  const images = document.querySelectorAll(".")
 
 
   /* Video Player */
   const videos = document.querySelectorAll(".video");
   videos.forEach((video)=> {
-    video.addEventListener("mouseover", function() {
-      this.play();
-    });
-    video.addEventListener("mouseleave", function() {
-      this.pause();
-    });
+    videoPlayer(video);
   })
-});// Support component names relative to this directory:
-var componentRequireContext = require.context("components", true);
-var ReactRailsUJS = require("react_ujs");
-ReactRailsUJS.useContext(componentRequireContext);
+});

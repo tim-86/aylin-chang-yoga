@@ -56,3 +56,26 @@
   border-left: none;
   border-right: 0.5px solid black;
 }
+
+@media screen and (max-width: 1050px) {
+  .card-info{
+    grid-template-columns: 1fr;
+  }
+  
+  .card-info-image{
+    height: 45vh;
+  }
+
+  .card-info-text {
+    margin-right: 0%;
+  }
+  .card-info-box{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .card-info-box-left{
+    order: 2;
+  }
+
+}
